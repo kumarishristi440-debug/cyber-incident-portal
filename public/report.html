@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Report Incident - CyberShield</title>
+
+    <link rel="stylesheet"
+          href="css/style.css">
+
+</head>
+
+<body>
+
+
+    <!-- NAVBAR -->
+
+    <nav>
+
+        <div class="logo">
+            🛡️ CyberShield
+        </div>
+
+        <div class="nav-links">
+
+            <a href="index.html">
+                Home
+            </a>
+
+            <a href="login.html">
+                Login
+            </a>
+
+            <a href="report.html">
+                Report Incident
+            </a>
+
+            <a href="dashboard.html">
+                Dashboard
+            </a>
+
+        </div>
+
+    </nav>
+
+
+
+    <!-- REPORT FORM -->
+
+    <div class="form-container">
+
+        <div class="report-header">
+
+            <div class="report-icon">
+                🚨
+            </div>
+
+            <h1>
+                Report Cyber Security Incident
+            </h1>
+
+            <p>
+                Please provide accurate information
+                about the incident.
+            </p>
+
+        </div>
+
+
+
+        <form id="incidentForm"
+              enctype="multipart/form-data">
+
+
+            <!-- INCIDENT TYPE -->
+
+            <label>
+                Incident Type
+            </label>
+
+            <select name="incidentType"
+                    required>
+
+                <option value="">
+                    Select incident type
+                </option>
+
+                <option value="Phishing">
+                    Phishing
+                </option>
+
+                <option value="Malware">
+                    Malware
+                </option>
+
+                <option value="Ransomware">
+                    Ransomware
+                </option>
+
+                <option value="Data Breach">
+                    Data Breach
+                </option>
+
+                <option value="Account Hacking">
+                    Account Hacking
+                </option>
+
+                <option value="DDoS Attack">
+                    DDoS Attack
+                </option>
+
+                <option value="Identity Theft">
+                    Identity Theft
+                </option>
+
+                <option value="Other">
+                    Other
+                </option>
+
+            </select>
+
+
+
+            <!-- TITLE -->
+
+            <label>
+                Incident Title
+            </label>
+
+            <input
+                type="text"
+                name="title"
+                placeholder="Example: Suspicious phishing email"
+                required
+            >
+
+
+
+            <!-- DESCRIPTION -->
+
+            <label>
+                Incident Description
+            </label>
+
+            <textarea
+                name="description"
+                rows="6"
+                placeholder="Explain what happened..."
+                required
+            ></textarea>
+
+
+
+            <!-- AFFECTED SYSTEM -->
+
+            <label>
+                Affected System
+            </label>
+
+            <select name="affectedSystem"
+                    required>
+
+                <option value="">
+                    Select affected system
+                </option>
+
+                <option value="Personal Computer">
+                    Personal Computer
+                </option>
+
+                <option value="Mobile Phone">
+                    Mobile Phone
+                </option>
+
+                <option value="Email Account">
+                    Email Account
+                </option>
+
+                <option value="Website">
+                    Website
+                </option>
+
+                <option value="Server">
+                    Server
+                </option>
+
+                <option value="Network">
+                    Network
+                </option>
+
+                <option value="Cloud Account">
+                    Cloud Account
+                </option>
+
+                <option value="Other">
+                    Other
+                </option>
+
+            </select>
+
+
+
+            <!-- SEVERITY -->
+
+            <label>
+                Incident Severity
+            </label>
+
+            <select name="severity"
+                    required>
+
+                <option value="">
+                    Select severity
+                </option>
+
+                <option value="Low">
+                    🟢 Low
+                </option>
+
+                <option value="Medium">
+                    🟡 Medium
+                </option>
+
+                <option value="High">
+                    🟠 High
+                </option>
+
+                <option value="Critical">
+                    🔴 Critical
+                </option>
+
+            </select>
+
+
+
+            <!-- EVIDENCE -->
+
+            <label>
+                Upload Evidence
+            </label>
+
+            <input
+                type="file"
+                name="evidence"
+            >
+
+            <small>
+                You can upload a screenshot or
+                supporting file.
+            </small>
+
+
+
+            <!-- SUBMIT -->
+
+            <button type="submit">
+
+                🚨 Submit Incident
+
+            </button>
+
+
+        </form>
+
+
+
+        <!-- RESULT -->
+
+        <div id="result"></div>
+
+    </div>
+
+
+
+    <!-- JAVASCRIPT -->
+
+    <script src="js/report.js"></script>
+
+
+</body>
+
+</html>
